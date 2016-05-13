@@ -9,6 +9,7 @@
      * TODO: should this be derived from -fx-accent?
      */
     -fx-focus-color: yellow;
+    -fx-shadow-highlight-color: yellow;
 }
 
 .anchorStyle {
@@ -16,24 +17,24 @@
 }
 
 .label {
-    -fx-font-size: 11pt;
+    -fx-font-size: 11.0pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: white;
     -fx-opacity: 0.6;
 }
 
 .label-bright {
-    -fx-font-size: 11pt;
+    -fx-font-size: 11.0pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: white;
-    -fx-opacity: 1;
+    -fx-opacity: 1.0;
 }
 
 .label-header {
-    -fx-font-size: 32pt;
+    -fx-font-size: 32.0pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
-    -fx-opacity: 1;
+    -fx-opacity: 1.0;
 }
 
 
@@ -53,7 +54,7 @@
     -fx-background-color: #1d1d1d;
     -fx-table-cell-border-color: transparent;
     -fx-table-header-border-color: transparent;
-    -fx-padding: 5;
+    -fx-padding: 5.0;
 }
 
 .table-view .column-header-background {
@@ -61,22 +62,22 @@
 }
 
 .table-view .column-header, .table-view .filler {
-    -fx-size: 35;
-    -fx-border-width: 0 0 1 0;
+    -fx-size: 35.0;
+    -fx-border-width: 0.0 0.0 1.0 0.0;
     -fx-border-color: 
         transparent
         transparent
-        derive(-fx-base, 80%) 
+        derive(-fx-base, 80.0%) 
         transparent;
-    -fx-border-insets: 0 10 1 0;
+    -fx-border-insets: 0.0 10.0 1.0 0.0;
 }
 
 .table-view .column-header .label {
-    -fx-font-size: 20pt;
+    -fx-font-size: 20.0pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
     -fx-alignment: center-left;
-    -fx-opacity: 1;
+    -fx-opacity: 1.0;
 }
 
 .table-view:focused .table-row-cell:filled:focused:selected {
@@ -85,7 +86,8 @@
 
 .slideButton {
 -fx-shape: "M204,369.75L357,255L204,140.25V369.75z M255,0C114.75,0,0,114.75,0,255s114.75,255,255,255s255-114.75,255-255    S395.25,0,255,0z M255,459c-112.2,0-204-91.8-204-204S142.8,51,255,51s204,91.8,204,204S367.2,459,255,459z";	
--fx-background-color: white;
+-fx-stroke: orange;
+    -fx-stroke-width: 10.0;
 }
 
 .pauseSlideButton {
@@ -97,16 +99,20 @@
 	c146.723,0,265.452,119.695,265.452,265.452C531.87,412.178,412.175,530.907,265.452,530.907z M265.452,23.17    
 	c-133.209,0-241.32,108.111-241.32,241.32s108.111,241.32,241.32,241.32s241.32-108.111,241.32-241.32    
 	C507.738,132.246,399.626,23.17,265.452,23.17z";
-	-fx-background-color: white;
+	-fx-stroke: orange;
+    -fx-stroke-width: 10.0;
+
 }
 
 .nextButton {
 -fx-shape: "m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z";
--fx-background-color: white;
+-fx-stroke: orange;
+    -fx-stroke-width: 5.0;
 }
 
 .previousButton {
 -fx-shape: "m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z";
--fx-background-color: white;
+-fx-stroke: orange;
+    -fx-stroke-width: 10.0;
 }
 
