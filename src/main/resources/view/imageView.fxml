@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-preview-i18n-resource ../bundle/base_pl.properties?>
+<?scenebuilder-stylesheet ../css/standard.css?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane fx:id="panel" prefHeight="704.0" prefWidth="1182.0" styleClass="anchorStyle" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.javafx.demo.ex2.fxApp2.controller.ImagePanelController">
+  <Label layoutX="517.0" layoutY="14.0" prefHeight="21.0" prefWidth="148.0" styleClass="formTitle" text="%label.formTitle" />
+   <ScrollPane layoutX="501.0" layoutY="62.0" pannable="true" prefHeight="492.0" prefWidth="655.0">
+     <content>
+       <VBox maxWidth="200.0" prefHeight="487.0" prefWidth="195.0" spacing="5.0">
+            <children>
+               <ImageView fx:id="imageView" pickOnBounds="true" preserveRatio="true">
+                <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor></ImageView>
+            </children>
+         </VBox>
+     </content>
+   </ScrollPane>
+   <Button fx:id="previousImageButton" layoutX="546.0" layoutY="562.0" mnemonicParsing="false" onAction="#previousButtonAction" prefHeight="39.0" prefWidth="39.0" styleClass="previousButton" />
+   <Button fx:id="nextImageButton" layoutX="1072.0" layoutY="562.0" mnemonicParsing="false" onAction="#nextButtonAction" prefHeight="39.0" prefWidth="39.0" styleClass="nextButton" />
+   <Button fx:id="browseDirectoryButton" layoutX="53.0" layoutY="47.0" mnemonicParsing="false" onAction="#searchButtonAction" prefHeight="31.0" prefWidth="260.0" text="%button.browse" />
+   <Button fx:id="slideShowButton" layoutX="764.0" layoutY="565.0" mnemonicParsing="false" onAction="#slideShowButton" prefHeight="46.0" prefWidth="46.0" styleClass="slideButton" />
+   <Button fx:id="slideShowEndButton" layoutX="863.0" layoutY="565.0" mnemonicParsing="false" onAction="#slideShowEndButton" prefHeight="46.0" prefWidth="46.0" styleClass="pauseSlideButton" />
+   <TableView fx:id="resultTable" layoutX="53.0" layoutY="106.0" prefHeight="492.0" prefWidth="260.0">
+     <columns>
+       <TableColumn fx:id="idColumn" prefWidth="75.0" text="%column.id" />
+       <TableColumn fx:id="nameColumn" prefWidth="184.00003051757812" text="%column.name" />
+     </columns>
+   </TableView>
+   
+</AnchorPane>
