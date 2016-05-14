@@ -2,6 +2,7 @@ package pl.javafx.demo.ex2.fxApp2.dataprovider;
 
 import java.io.File;
 
+// REV: ta klasa powinna byc w pakiecie data
 public class ImageVo {
 
 	File file;

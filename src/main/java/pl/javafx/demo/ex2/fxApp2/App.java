@@ -29,6 +29,7 @@ public class App extends Application {
 		primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 			@Override
 			public void handle(WindowEvent e) {
+				// REV: po co jest to potrzebne?
 				Platform.exit();
 				System.exit(0);
 			}

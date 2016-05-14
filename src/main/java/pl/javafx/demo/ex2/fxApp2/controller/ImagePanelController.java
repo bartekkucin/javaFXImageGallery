@@ -102,6 +102,7 @@ public class ImagePanelController {
 	public void searchButtonAction(ActionEvent event) {
 		DirectoryChooser directoryChooser = new DirectoryChooser();
 		File directory = directoryChooser.showDialog(panel.getScene().getWindow());
+		// REV: imageViewProvider powinien byc wywolany w osobnym watku
 		model.setResult(imageViewProvider.searchForImages(directory));
 	}
 
@@ -158,6 +159,7 @@ public class ImagePanelController {
 		resultTable.getSelectionModel().select((id).intValue());
 	}
 
+	// REV: nazwa metody powinna byc czasownikiem
 	@FXML
 	public void slideShowButton(ActionEvent event) {
 
@@ -166,9 +168,11 @@ public class ImagePanelController {
 
 		long delay = 2000; // update once per 2 seconds.
 		if (!isSlideShowStarted) {
+			// REV: lepiej uzyc disable
 			resultTable.setMouseTransparent(true);
 			resultTable.setFocusTraversable(true);
 			resultTable.getSelectionModel().select(null);
+			// REV: warto tez deaktywowac przycisk slideShowButton
 			timer = new Timer();
 			timer.schedule(new TimerTask() {
 
@@ -191,12 +195,14 @@ public class ImagePanelController {
 		}
 	}
 
+	// REV: j.w.
 	@FXML
 	public void slideShowEndButton(ActionEvent event) {
 
 		if(isSlideShowStarted)
 		{
 		timer.cancel();
+		// REV: lepiej uzyc bindow
 		resultTable.setMouseTransparent(false);
 		resultTable.setFocusTraversable(false);
 		browseDirectoryButton.setDisable(false);

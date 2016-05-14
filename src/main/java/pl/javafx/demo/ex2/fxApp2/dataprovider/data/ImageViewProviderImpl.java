@@ -7,6 +7,7 @@ import java.util.List;
 
 import pl.javafx.demo.ex2.fxApp2.dataprovider.ImageVo;
 
+// REV: ta klasa powinna byc w pakiecie dataprovider
 public class ImageViewProviderImpl implements IImageViewProvider {
 
 	@Override
@@ -20,6 +21,7 @@ public class ImageViewProviderImpl implements IImageViewProvider {
 
 				@Override
 				public boolean accept(File directory, String fileName) {
+					// REV: if nie jest potrzebny
 					if (checkIfFileIsACorrectImage(fileName)) {
 						return true;
 					}
